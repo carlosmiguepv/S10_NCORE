@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using S10_NCORE.Domain.Core.Entities;
+using S10_NCORE.Domain.Core.Interfaces;
 using S10_NCORE.Domain.Infraestructure.Data;
 
 namespace S10_NCORE.Domain.Infraestructure.Repositories
 {
-    class CustomerRepository
+    public class CustomerRepository : ICustomerRepository
     {
         private readonly SalesContext _context;
 
@@ -26,7 +27,7 @@ namespace S10_NCORE.Domain.Infraestructure.Repositories
         }
         public async Task<Customer> GetCustomersById(int id)
         {
-            return await _context.Customer.Where(x=> x.Id==id).FirstOrDefaultAsync();
+            return await _context.Customer.Where(x => x.Id == id).FirstOrDefaultAsync();
 
         }
 

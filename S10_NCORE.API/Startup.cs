@@ -5,11 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using S10_NCORE.Domain.Core.Interfaces;
+using S10_NCORE.Domain.Infraestructure.Data;
+using S10_NCORE.Domain.Infraestructure.Repositories;
 
 namespace S10_NCORE.API
 {
@@ -31,6 +35,14 @@ namespace S10_NCORE.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "S10_NCORE.API", Version = "v1" });
             });
+
+
+            services.AddDbContext<SalesContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DevConnection"));
+            });
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
