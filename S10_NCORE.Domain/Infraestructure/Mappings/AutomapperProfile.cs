@@ -16,6 +16,8 @@ namespace S10_NCORE.Domain.Infraestructure.Mappings
         {
             CreateMap<Customer, CustomerDTO>();
             CreateMap<CustomerDTO, Customer>();
+            CreateMap<Customer, CustomerPostDTO>();
+            CreateMap<CustomerPostDTO, Customer>();
         }
     }
 }
