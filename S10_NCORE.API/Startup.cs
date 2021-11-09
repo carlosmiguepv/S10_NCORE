@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using S10_NCORE.Domain.Core.Interfaces;
 using S10_NCORE.Domain.Infraestructure.Data;
+using S10_NCORE.Domain.Infraestructure.Mappings;
 using S10_NCORE.Domain.Infraestructure.Repositories;
 
 namespace S10_NCORE.API
@@ -41,7 +42,10 @@ namespace S10_NCORE.API
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DevConnection"));
             });
+
             services.AddTransient<ICustomerRepository, CustomerRepository>();
+
+            services.AddAutoMapper(typeof(AutomapperProfile));
 
         }
 
