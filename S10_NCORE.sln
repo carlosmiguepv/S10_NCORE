@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S10_NCORE.API", "S10_NCORE.API\S10_NCORE.API.csproj", "{772C7CD3-DDF1-4D03-BBE7-47B4BF13A2AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S10_NCORE.Domain", "S10_NCORE.Domain\S10_NCORE.Domain.csproj", "{6F52E16C-C4EC-41C3-A47D-6EF7AEDAC657}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{772C7CD3-DDF1-4D03-BBE7-47B4BF13A2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772C7CD3-DDF1-4D03-BBE7-47B4BF13A2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772C7CD3-DDF1-4D03-BBE7-47B4BF13A2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772C7CD3-DDF1-4D03-BBE7-47B4BF13A2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F52E16C-C4EC-41C3-A47D-6EF7AEDAC657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F52E16C-C4EC-41C3-A47D-6EF7AEDAC657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F52E16C-C4EC-41C3-A47D-6EF7AEDAC657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F52E16C-C4EC-41C3-A47D-6EF7AEDAC657}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5BA312F-6A38-4E9E-BDD9-0ECCA414EBC2}
+	EndGlobalSection
+EndGlobal
